@@ -128,7 +128,7 @@ $ curl -X GET "https://api.todoist.com/rest/v2/tasks"  -H "Authorization: Bearer
 # Export the API token to a variable
 
 Claudia.Aparicio@CAPARICIOC-NH01 MINGW64 ~
-$ export token=7357cc39152295c3c4e1e568f90e1e1dc4a04f6a                                                      
+$ export token=00                                                      
 
 
 #Get all tasks
