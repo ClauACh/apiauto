@@ -64,11 +64,11 @@
                         <div class="col s2">
                             <ul>
                                 
-                                    <li><strong>Total</strong>: 6</li>
+                                    <li><strong>Total</strong>: 9</li>
                                 
-                                    <li><strong>Passed</strong>: 4</li>
+                                    <li><strong>Passed</strong>: 8</li>
                                 
-                                    <li><strong>Error</strong>: 2</li>
+                                    <li><strong>Error</strong>: 1</li>
                                 
                             </ul>
                         </div>
@@ -92,19 +92,19 @@
                     </div>
                     <ul class="collapsible" data-collapsible="accordian">
                         
-                            <li data-filter-result="passed" data-search-key="api.sections.Sections.test_create_section">
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_close_task">
                                 <div class="collapsible-header test-case--passed">
                                     <i class="material-icons">
                                         
                                             done
                                         
                                     </i>
-                                    api.sections.Sections.test_create_section
+                                    api.tasks.Tasks.test_close_task
                                 </div>
                                 <div class="collapsible-body">
                                     <strong>Description</strong>
                                     
-                                        <p><br/>        Test to create section<br/>        :return:<br/>        </p>
+                                        <p><br/>        Test to close a task<br/>        :return:<br/>        </p>
                                     
 
                                     <strong>Result: passed</strong>
@@ -115,14 +115,83 @@
                                 </div>
                             </li>
                         
-                            <li data-filter-result="passed" data-search-key="api.sections.Sections.test_delete_session">
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_create_task">
                                 <div class="collapsible-header test-case--passed">
                                     <i class="material-icons">
                                         
                                             done
                                         
                                     </i>
-                                    api.sections.Sections.test_delete_session
+                                    api.tasks.Tasks.test_create_task
+                                </div>
+                                <div class="collapsible-body">
+                                    <strong>Description</strong>
+                                    
+                                        <p><br/>        Test create a task<br/>        :return:<br/>        </p>
+                                    
+
+                                    <strong>Result: passed</strong>
+                                    <br/>
+
+                                    <strong>Traceback</strong>
+                                    <code><pre>None</pre></code>
+                                </div>
+                            </li>
+                        
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_create_task_with_project_id">
+                                <div class="collapsible-header test-case--passed">
+                                    <i class="material-icons">
+                                        
+                                            done
+                                        
+                                    </i>
+                                    api.tasks.Tasks.test_create_task_with_project_id
+                                </div>
+                                <div class="collapsible-body">
+                                    <strong>Description</strong>
+                                    
+                                        <p><br/>        Test to create a task in a project<br/>        :return:<br/>        </p>
+                                    
+
+                                    <strong>Result: passed</strong>
+                                    <br/>
+
+                                    <strong>Traceback</strong>
+                                    <code><pre>None</pre></code>
+                                </div>
+                            </li>
+                        
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_create_task_with_section_id">
+                                <div class="collapsible-header test-case--passed">
+                                    <i class="material-icons">
+                                        
+                                            done
+                                        
+                                    </i>
+                                    api.tasks.Tasks.test_create_task_with_section_id
+                                </div>
+                                <div class="collapsible-body">
+                                    <strong>Description</strong>
+                                    
+                                        <p><br/>        Test to create a task in a section<br/>        :return:<br/>        </p>
+                                    
+
+                                    <strong>Result: passed</strong>
+                                    <br/>
+
+                                    <strong>Traceback</strong>
+                                    <code><pre>None</pre></code>
+                                </div>
+                            </li>
+                        
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_delete_task">
+                                <div class="collapsible-header test-case--passed">
+                                    <i class="material-icons">
+                                        
+                                            done
+                                        
+                                    </i>
+                                    api.tasks.Tasks.test_delete_task
                                 </div>
                                 <div class="collapsible-body">
                                     <strong>Description</strong>
@@ -138,93 +207,19 @@
                                 </div>
                             </li>
                         
-                            <li data-filter-result="error" data-search-key="api.sections.Sections.test_get_all_sections">
-                                <div class="collapsible-header test-case--error">
-                                    <i class="material-icons">
-                                        
-                                            error
-                                        
-                                    </i>
-                                    api.sections.Sections.test_get_all_sections
-                                </div>
-                                <div class="collapsible-body">
-                                    <strong>Description</strong>
-                                    
-                                        <p><br/>        Test to get all sections<br/>        :return:<br/>        </p>
-                                    
-
-                                    <strong>Result: error</strong>
-                                    <br/>
-
-                                    <strong>Traceback</strong>
-                                    <code><pre>Traceback (most recent call last):
-  File "C:\Program Files\Python38\lib\unittest\case.py", line 60, in testPartExecutor
-    yield
-  File "C:\Program Files\Python38\lib\unittest\case.py", line 676, in run
-    self._callTestMethod(testMethod)
-  File "C:\Program Files\Python38\lib\unittest\case.py", line 633, in _callTestMethod
-    method()
-  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\sections.py", line 46, in test_get_all_sections
-    ValidateResponse().validate_response(actual_response=response, method="get",
-  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\validate_response.py", line 22, in validate_response
-    self.validate_value(actual_response["body"], input_data["response"]["body"], field="body")
-  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\validate_response.py", line 30, in validate_value
-    assert self.compare_json(expected_value[0], actual_value[0]), msg_error
-KeyError: 0
-</pre></code>
-                                </div>
-                            </li>
-                        
-                            <li data-filter-result="error" data-search-key="api.sections.Sections.test_get_all_sections_by_project">
-                                <div class="collapsible-header test-case--error">
-                                    <i class="material-icons">
-                                        
-                                            error
-                                        
-                                    </i>
-                                    api.sections.Sections.test_get_all_sections_by_project
-                                </div>
-                                <div class="collapsible-body">
-                                    <strong>Description</strong>
-                                    
-                                        <p><br/>        Test to get all sections by project id<br/>        :return:<br/>        </p>
-                                    
-
-                                    <strong>Result: error</strong>
-                                    <br/>
-
-                                    <strong>Traceback</strong>
-                                    <code><pre>Traceback (most recent call last):
-  File "C:\Program Files\Python38\lib\unittest\case.py", line 60, in testPartExecutor
-    yield
-  File "C:\Program Files\Python38\lib\unittest\case.py", line 676, in run
-    self._callTestMethod(testMethod)
-  File "C:\Program Files\Python38\lib\unittest\case.py", line 633, in _callTestMethod
-    method()
-  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\sections.py", line 60, in test_get_all_sections_by_project
-    ValidateResponse().validate_response(actual_response=response, method="get", expected_status_code=200,
-  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\validate_response.py", line 22, in validate_response
-    self.validate_value(actual_response["body"], input_data["response"]["body"], field="body")
-  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\validate_response.py", line 30, in validate_value
-    assert self.compare_json(expected_value[0], actual_value[0]), msg_error
-KeyError: 0
-</pre></code>
-                                </div>
-                            </li>
-                        
-                            <li data-filter-result="passed" data-search-key="api.sections.Sections.test_get_section">
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_get_all_tasks">
                                 <div class="collapsible-header test-case--passed">
                                     <i class="material-icons">
                                         
                                             done
                                         
                                     </i>
-                                    api.sections.Sections.test_get_section
+                                    api.tasks.Tasks.test_get_all_tasks
                                 </div>
                                 <div class="collapsible-body">
                                     <strong>Description</strong>
                                     
-                                        <p><br/>            Test for getting a section by id<br/>        :return:<br/>        </p>
+                                        <p><br/>        Test to get all the tasks<br/>        :return:<br/>        </p>
                                     
 
                                     <strong>Result: passed</strong>
@@ -235,19 +230,79 @@ KeyError: 0
                                 </div>
                             </li>
                         
-                            <li data-filter-result="passed" data-search-key="api.sections.Sections.test_update_section">
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_get_task_by_id">
                                 <div class="collapsible-header test-case--passed">
                                     <i class="material-icons">
                                         
                                             done
                                         
                                     </i>
-                                    api.sections.Sections.test_update_section
+                                    api.tasks.Tasks.test_get_task_by_id
                                 </div>
                                 <div class="collapsible-body">
                                     <strong>Description</strong>
                                     
-                                        <p><br/>            Test to update a Section<br/>        :return:<br/>        </p>
+                                        <p><br/>        Test to get a task by id<br/>        :return:<br/>        </p>
+                                    
+
+                                    <strong>Result: passed</strong>
+                                    <br/>
+
+                                    <strong>Traceback</strong>
+                                    <code><pre>None</pre></code>
+                                </div>
+                            </li>
+                        
+                            <li data-filter-result="error" data-search-key="api.tasks.Tasks.test_reopen_task">
+                                <div class="collapsible-header test-case--error">
+                                    <i class="material-icons">
+                                        
+                                            error
+                                        
+                                    </i>
+                                    api.tasks.Tasks.test_reopen_task
+                                </div>
+                                <div class="collapsible-body">
+                                    <strong>Description</strong>
+                                    
+                                        <p><br/>        Test of reopening a task<br/>        :return<br/>        </p>
+                                    
+
+                                    <strong>Result: error</strong>
+                                    <br/>
+
+                                    <strong>Traceback</strong>
+                                    <code><pre>Traceback (most recent call last):
+  File "C:\Program Files\Python38\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+  File "C:\Program Files\Python38\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+  File "C:\Program Files\Python38\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\tasks.py", line 121, in test_reopen_task
+    ValidateResponse().validate_response(actual_response=response, method="reopen", expected_status_code=204,
+  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\validate_response.py", line 16, in validate_response
+    input_data = self.get_input_data_from_json(file_name)
+  File "C:\Users\claudia.aparicio\Documents\API Automation course JALA\apiauto\api\validate_response.py", line 48, in get_input_data_from_json
+    with open(file_name, encoding="utf8") as json_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\claudia.aparicio\\Documents\\API Automation course JALA\\apiauto/api/input_data/task_reopen_204.json'
+</pre></code>
+                                </div>
+                            </li>
+                        
+                            <li data-filter-result="passed" data-search-key="api.tasks.Tasks.test_update_task">
+                                <div class="collapsible-header test-case--passed">
+                                    <i class="material-icons">
+                                        
+                                            done
+                                        
+                                    </i>
+                                    api.tasks.Tasks.test_update_task
+                                </div>
+                                <div class="collapsible-body">
+                                    <strong>Description</strong>
+                                    
+                                        <p><br/>            Test to update a Task<br/>        :return:<br/>        </p>
                                     
 
                                     <strong>Result: passed</strong>
@@ -267,7 +322,7 @@ KeyError: 0
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
         <script type="text/javascript">
             // Map test cases to their search terms
-            var AUTOCOMPLETE_TERMS_MAP = {"api.sections.Sections.test_create_section": "api.sections.Sections.test_create_section", "Test": ["api.sections.Sections.test_create_section", "api.sections.Sections.test_delete_session", "api.sections.Sections.test_get_all_sections", "api.sections.Sections.test_get_all_sections_by_project", "api.sections.Sections.test_get_section", "api.sections.Sections.test_update_section"], "to": ["api.sections.Sections.test_create_section", "api.sections.Sections.test_delete_session", "api.sections.Sections.test_get_all_sections", "api.sections.Sections.test_get_all_sections_by_project", "api.sections.Sections.test_update_section"], "create": ["api.sections.Sections.test_create_section"], "section": ["api.sections.Sections.test_create_section", "api.sections.Sections.test_get_section"], ":return:": ["api.sections.Sections.test_create_section", "api.sections.Sections.test_delete_session", "api.sections.Sections.test_get_all_sections", "api.sections.Sections.test_get_all_sections_by_project", "api.sections.Sections.test_get_section", "api.sections.Sections.test_update_section"], "api.sections.Sections.test_delete_session": "api.sections.Sections.test_delete_session", "delete": ["api.sections.Sections.test_delete_session"], "session": ["api.sections.Sections.test_delete_session"], "api.sections.Sections.test_get_all_sections": "api.sections.Sections.test_get_all_sections", "get": ["api.sections.Sections.test_get_all_sections", "api.sections.Sections.test_get_all_sections_by_project"], "all": ["api.sections.Sections.test_get_all_sections", "api.sections.Sections.test_get_all_sections_by_project"], "sections": ["api.sections.Sections.test_get_all_sections", "api.sections.Sections.test_get_all_sections_by_project"], "api.sections.Sections.test_get_all_sections_by_project": "api.sections.Sections.test_get_all_sections_by_project", "by": ["api.sections.Sections.test_get_all_sections_by_project", "api.sections.Sections.test_get_section"], "project": ["api.sections.Sections.test_get_all_sections_by_project"], "id": ["api.sections.Sections.test_get_all_sections_by_project", "api.sections.Sections.test_get_section"], "api.sections.Sections.test_get_section": "api.sections.Sections.test_get_section", "for": ["api.sections.Sections.test_get_section"], "getting": ["api.sections.Sections.test_get_section"], "a": ["api.sections.Sections.test_get_section", "api.sections.Sections.test_update_section"], "api.sections.Sections.test_update_section": "api.sections.Sections.test_update_section", "update": ["api.sections.Sections.test_update_section"], "Section": ["api.sections.Sections.test_update_section"]};
+            var AUTOCOMPLETE_TERMS_MAP = {"api.tasks.Tasks.test_close_task": "api.tasks.Tasks.test_close_task", "Test": ["api.tasks.Tasks.test_close_task", "api.tasks.Tasks.test_create_task", "api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_section_id", "api.tasks.Tasks.test_delete_task", "api.tasks.Tasks.test_get_all_tasks", "api.tasks.Tasks.test_get_task_by_id", "api.tasks.Tasks.test_reopen_task", "api.tasks.Tasks.test_update_task"], "to": ["api.tasks.Tasks.test_close_task", "api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_section_id", "api.tasks.Tasks.test_delete_task", "api.tasks.Tasks.test_get_all_tasks", "api.tasks.Tasks.test_get_task_by_id", "api.tasks.Tasks.test_update_task"], "close": ["api.tasks.Tasks.test_close_task"], "a": ["api.tasks.Tasks.test_close_task", "api.tasks.Tasks.test_create_task", "api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_section_id", "api.tasks.Tasks.test_create_task_with_section_id", "api.tasks.Tasks.test_get_task_by_id", "api.tasks.Tasks.test_reopen_task", "api.tasks.Tasks.test_update_task"], "task": ["api.tasks.Tasks.test_close_task", "api.tasks.Tasks.test_create_task", "api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_section_id", "api.tasks.Tasks.test_get_task_by_id", "api.tasks.Tasks.test_reopen_task"], ":return:": ["api.tasks.Tasks.test_close_task", "api.tasks.Tasks.test_create_task", "api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_section_id", "api.tasks.Tasks.test_delete_task", "api.tasks.Tasks.test_get_all_tasks", "api.tasks.Tasks.test_get_task_by_id", "api.tasks.Tasks.test_update_task"], "api.tasks.Tasks.test_create_task": "api.tasks.Tasks.test_create_task", "create": ["api.tasks.Tasks.test_create_task", "api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_section_id"], "api.tasks.Tasks.test_create_task_with_project_id": "api.tasks.Tasks.test_create_task_with_project_id", "in": ["api.tasks.Tasks.test_create_task_with_project_id", "api.tasks.Tasks.test_create_task_with_section_id"], "project": ["api.tasks.Tasks.test_create_task_with_project_id"], "api.tasks.Tasks.test_create_task_with_section_id": "api.tasks.Tasks.test_create_task_with_section_id", "section": ["api.tasks.Tasks.test_create_task_with_section_id"], "api.tasks.Tasks.test_delete_task": "api.tasks.Tasks.test_delete_task", "delete": ["api.tasks.Tasks.test_delete_task"], "session": ["api.tasks.Tasks.test_delete_task"], "api.tasks.Tasks.test_get_all_tasks": "api.tasks.Tasks.test_get_all_tasks", "get": ["api.tasks.Tasks.test_get_all_tasks", "api.tasks.Tasks.test_get_task_by_id"], "all": ["api.tasks.Tasks.test_get_all_tasks"], "the": ["api.tasks.Tasks.test_get_all_tasks"], "tasks": ["api.tasks.Tasks.test_get_all_tasks"], "api.tasks.Tasks.test_get_task_by_id": "api.tasks.Tasks.test_get_task_by_id", "by": ["api.tasks.Tasks.test_get_task_by_id"], "id": ["api.tasks.Tasks.test_get_task_by_id"], "api.tasks.Tasks.test_reopen_task": "api.tasks.Tasks.test_reopen_task", "of": ["api.tasks.Tasks.test_reopen_task"], "reopening": ["api.tasks.Tasks.test_reopen_task"], ":return": ["api.tasks.Tasks.test_reopen_task"], "api.tasks.Tasks.test_update_task": "api.tasks.Tasks.test_update_task", "update": ["api.tasks.Tasks.test_update_task"], "Task": ["api.tasks.Tasks.test_update_task"]};
             var AUTOCOMPLETE_TERMS_ARRAY = Object.keys(AUTOCOMPLETE_TERMS_MAP);
 
             $(function() {
