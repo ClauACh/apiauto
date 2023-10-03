@@ -2,7 +2,7 @@
 (c) Copyright Jalasoft. 2023
 
 projects.py
-    configuration of logger file
+    projects tests
 """
 import logging
 import unittest

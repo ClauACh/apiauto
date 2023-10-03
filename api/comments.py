@@ -101,7 +101,7 @@ class Comments(unittest.TestCase):
         :return:
         """
         data = {
-            "content": "Comment updated from API"
+            "content": "Comment updated"
         }
         comment_id = self.get_comments_on_task().json()[0]["id"]
         LOGGER.info("Comment Id: %s", comment_id)

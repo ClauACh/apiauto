@@ -1,3 +1,9 @@
+"""
+(c) Copyright Jalasoft. 2023
+
+sections.py
+    sections tests
+"""
 import logging
 import unittest
 
@@ -13,18 +19,21 @@ LOGGER = get_logger(__name__, logging.DEBUG)
 
 
 class Sections(unittest.TestCase):
-
+    """
+        Class for sections endpoint
+    """
     @classmethod
     def setUpClass(cls):
         cls.url_section = "https://api.todoist.com/rest/v2/sections"
         cls.session = requests.Session()
 
-        cls.project_id = TodoBase().get_all_projects().json()[1]["id"]
-        """cls.section_id_update = ""
-        cls.sections_list = []"""
-    def test_create_session(self):
+        cls.project_id = TodoBase().get_all_projects()["body"][1]["id"]
+        cls.section_id_update = ""
+        cls.sections_list = []
+
+    def test_create_section(self):
         """
-        Test to create session
+        Test to create section
         :return:
         """
         data = {
@@ -33,7 +42,10 @@ class Sections(unittest.TestCase):
         }
         response = RestClient().send_request("post", session=self.session, headers=HEADERS,
                                              url=self.url_section, data=data)
-        assert response.status_code == 200
+        ValidateResponse().validate_response(actual_response=response, method="post",
+                                             expected_status_code=200,
+                                             feature="section")
+
     def test_get_all_sections(self):
         """
         Test to get all sections
@@ -41,8 +53,10 @@ class Sections(unittest.TestCase):
         """
         response = RestClient().send_request(method_name="get", session=self.session,
                                              url=self.url_section, headers=HEADERS)
-        LOGGER.info("Number of sections returned: %s", len(response.json()))
-        assert response.status_code == 200
+        LOGGER.info("Number of sections returned: %s", len(response["body"]))
+        ValidateResponse().validate_response(actual_response=response, method="get",
+                                             expected_status_code=200,
+                                             feature="sections")
 
     def test_get_all_sections_by_project(self):
         """
@@ -54,17 +68,26 @@ class Sections(unittest.TestCase):
 
         response = RestClient().send_request("get", session=self.session, headers=HEADERS,
                                              url=url_section)
-        LOGGER.info("Number of sections returned: %s", len(response.json()))
-        assert response.status_code == 200
+        LOGGER.info("Number of sections returned: %s", len(response["body"]))
+        ValidateResponse().validate_response(actual_response=response, method="get",
+                                             expected_status_code=200,
+                                             feature="sections")
 
     def test_get_section(self):
+        """
+            Test for getting a section by id
+        :return:
+        """
         response = TodoBase().get_all_sections()
-        section_id = response.json()[0]["id"]
+        section_id = response["body"][0]["id"]
         LOGGER.info("Section Id: %s", section_id)
         url_section = f"{self.url_section}/{section_id}"
         response = RestClient().send_request("get", session=self.session, headers=HEADERS,
                                              url=url_section)
-        assert response.status_code == 200
+        response = response["body"]
+        ValidateResponse().validate_response(actual_response=response, method="get",
+                                             expected_status_code=200,
+                                             feature="section")
 
     def test_update_section(self):
         """
@@ -76,20 +99,31 @@ class Sections(unittest.TestCase):
             "name": "Edited Section2"
         }
         response = TodoBase().get_all_sections()
-        section_id = response.json()[0]["id"]
+        section_id = response["body"][0]["id"]
         LOGGER.info("Section Id: %s", section_id)
         url_section = f"{self.url_section}/{section_id}"
         response = RestClient().send_request("post", session=self.session, headers=HEADERS,
                                              url=url_section, data=data)
-        assert response.status_code == 200
-
+        ValidateResponse().validate_response(actual_response=response, method="post",
+                                             expected_status_code=200,
+                                             feature="section")
 
     def test_delete_session(self):
         """
         Test to delete session
         :return:
         """
+        response = TodoBase().get_all_sections()
+        response_body = response["body"]
+        section_id = response_body[1]["id"]
+        LOGGER.info("Section deleted: %s", section_id)
         response = RestClient().send_request("delete", session=self.session,
                                                  url=self.url_section,
                                                  headers=HEADERS)
-        assert response.status_code == 204
+        ValidateResponse().validate_response(actual_response=response, method="delete",
+                                             expected_status_code=204,
+                                             feature="section")
+
+    @classmethod
+    def tearDownClass(cls):
+        print("tearDown Class")

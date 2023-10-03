@@ -1,0 +1,5 @@
+nose2==0.13.0
+python-dotenv==1.0.0
+requests==2.31.0
+nose2-html-reports==0.6.0
+
